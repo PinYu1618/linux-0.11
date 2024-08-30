@@ -4,17 +4,17 @@
 #include <sys/types.h>
 
 struct stat {
-	dev_t	st_dev;
-	ino_t	st_ino;
-	umode_t	st_mode;
-	nlink_t	st_nlink;
-	uid_t	st_uid;
-	gid_t	st_gid;
-	dev_t	st_rdev;
-	off_t	st_size;
-	time_t	st_atime;
-	time_t	st_mtime;
-	time_t	st_ctime;
+    dev_t	st_dev;
+    ino_t	st_ino;
+    umode_t	st_mode;
+    nlink_t	st_nlink;
+    uid_t	st_uid;
+    gid_t	st_gid;
+    dev_t	st_rdev;
+    off_t	st_size;
+    time_t	st_atime;
+    time_t	st_mtime;
+    time_t	st_ctime;
 };
 
 #define S_IFMT  00170000
@@ -48,11 +48,11 @@ struct stat {
 #define S_IWOTH 00002
 #define S_IXOTH 00001
 
-extern int chmod(const char *_path, mode_t mode);
-extern int fstat(int fildes, struct stat *stat_buf);
-extern int mkdir(const char *_path, mode_t mode);
-extern int mkfifo(const char *_path, mode_t mode);
-extern int stat(const char *filename, struct stat *stat_buf);
+extern int chmod(const char* _path, mode_t mode);
+extern int fstat(int fildes, struct stat* stat_buf);
+extern int mkdir(const char* _path, mode_t mode);
+extern int mkfifo(const char* _path, mode_t mode);
+extern int stat(const char* filename, struct stat* stat_buf);
 extern mode_t umask(mode_t mask);
 
 #endif

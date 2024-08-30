@@ -4,7 +4,7 @@
 #define BUFFER_END 0x200000
 
 #define I_TYPE          0170000
-#define I_DIRECTORY	0040000
+#define I_DIRECTORY	    0040000
 #define I_REGULAR       0100000
 #define I_BLOCK_SPECIAL 0060000
 #define I_CHAR_SPECIAL  0020000

@@ -20,11 +20,11 @@ extern void floppy_deselect(unsigned int nr);
 #define FD_DCR		0x3f7		/* Diskette Control Register (write)*/
 
 /* Bits of main status register */
-#define STATUS_BUSYMASK	0x0F		/* drive busy mask */
+#define STATUS_BUSYMASK	0x0F	/* drive busy mask */
 #define STATUS_BUSY	0x10		/* FDC busy */
 #define STATUS_DMA	0x20		/* 0- DMA mode */
 #define STATUS_DIR	0x40		/* 0- cpu->fdc */
-#define STATUS_READY	0x80		/* Data reg ready */
+#define STATUS_READY	0x80	/* Data reg ready */
 
 /* Bits of FD_ST0 */
 #define ST0_DS		0x03		/* drive select mask */
@@ -57,7 +57,7 @@ extern void floppy_deselect(unsigned int nr);
 #define ST3_WP		0x40		/* Write Protect */
 
 /* Values for FD_COMMAND */
-#define FD_RECALIBRATE	0x07		/* move to track 0 */
+#define FD_RECALIBRATE	0x07	/* move to track 0 */
 #define FD_SEEK		0x0F		/* seek track */
 #define FD_READ		0xE6		/* read with MT, MFM, SKip deleted */
 #define FD_WRITE	0xC5		/* write with MT, MFM */

@@ -29,7 +29,7 @@
 #define F_SETLK		6
 #define F_SETLKW	7
 
-/* for F_[GET|SET]FL */
+ /* for F_[GET|SET]FL */
 #define FD_CLOEXEC	1	/* actually anything with low bit set goes */
 
 /* Ok, these are locking features, and aren't implemented at any
@@ -39,17 +39,17 @@
 #define F_WRLCK		1
 #define F_UNLCK		2
 
-/* Once again - not implemented, but ... */
+ /* Once again - not implemented, but ... */
 struct flock {
-	short l_type;
-	short l_whence;
-	off_t l_start;
-	off_t l_len;
-	pid_t l_pid;
+    short l_type;
+    short l_whence;
+    off_t l_start;
+    off_t l_len;
+    pid_t l_pid;
 };
 
-extern int creat(const char * filename,mode_t mode);
-extern int fcntl(int fildes,int cmd, ...);
-extern int open(const char * filename, int flags, ...);
+extern int creat(const char* filename, mode_t mode);
+extern int fcntl(int fildes, int cmd, ...);
+extern int open(const char* filename, int flags, ...);
 
 #endif
